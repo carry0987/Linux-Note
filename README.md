@@ -4,7 +4,7 @@ The notes for Linux
 ## Author : carry0987
 | Project | Link |
 | :--- | :--- |
-| Gitbook | [Linux-Script](https://carry0987.github.io/Linux-Note/) |
+| Gitbook | [Linux-Note](https://carry0987.github.io/Linux-Note/) |
 
 ## Contact
 | Website | Link |
