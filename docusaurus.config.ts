@@ -48,6 +48,8 @@ const config: Config = {
                 },
                 blog: {
                     showReadingTime: true,
+                    blogSidebarTitle: 'All posts',
+                    blogSidebarCount: 'ALL',
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl: 'https://github.com/carry0987/Linux-Note/tree/master/',
