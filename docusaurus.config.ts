@@ -95,7 +95,7 @@ const config: Config = {
         prism: {
             theme: prismThemes.oneDark,
             darkTheme: prismThemes.oneDark,
-            additionalLanguages: ['tsx', 'css', 'json', 'bash'],
+            additionalLanguages: ['tsx', 'css', 'json', 'bash', 'ini', 'nginx'],
         },
         liveCodeBlock: {
             /**

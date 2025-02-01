@@ -60,36 +60,36 @@ kubectl apply -f metallb-config.yml
 
 ### Verify Installation
 1. **Check MetalLB Pods:**
-   Ensure all MetalLB pods are running:
+    Ensure all MetalLB pods are running:
 
-   ```bash
-   kubectl get pods -n metallb-system
-   ```
+    ```bash
+    kubectl get pods -n metallb-system
+    ```
 
 2. **Test LoadBalancer:**
-   Deploy a simple service with `LoadBalancer` type to test MetalLB:
+    Deploy a simple service with `LoadBalancer` type to test MetalLB:
 
-   ```yaml
-   apiVersion: v1
-   kind: Service
-   metadata:
-     name: test-loadbalancer
-   spec:
-     selector:
-       app: nginx
-     ports:
-       - protocol: TCP
-         port: 80
-         targetPort: 80
-     type: LoadBalancer
-   ```
+    ```yaml
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: test-loadbalancer
+    spec:
+      selector:
+        app: nginx
+      ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 80
+      type: LoadBalancer
+    ```
 
-   Apply and observe the `EXTERNAL-IP`:
+    Apply and observe the `EXTERNAL-IP`:
 
-   ```bash
-   kubectl apply -f test-loadbalancer.yml
-   kubectl get services
-   ```
+    ```bash
+    kubectl apply -f test-loadbalancer.yml
+    kubectl get services
+    ```
 
 ### Networking Notes
 When using MetalLB:

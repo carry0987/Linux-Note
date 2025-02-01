@@ -3,9 +3,9 @@ title: Crontab Syntax
 sidebar_position: 4
 ---
 
-A crontab file has five fields for specifying day , date and time followed by the command to be run at that interval.
+A crontab file has five fields for specifying day, date and time followed by the command to be run at that interval.
 
-![crontab](https://i.imgur.com/am6Yokm.png)
+![crontab](./img/syntax.png)  
 `*` in the value field above means all legal values as in braces for that column.
 
 The value column can have a `*` or a list of elements separated by commas. An element is either a number in the ranges shown above or two numbers in the range separated by a hyphen (meaning an inclusive range).

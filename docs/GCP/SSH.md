@@ -27,7 +27,7 @@ You can generate a new pair of public/private keys using the following command:
 ssh-keygen -t rsa -f ~/.ssh/my-ssh-key -C [USERNAME]
 ```
 Input a passphrase to protect this pair of keys. 
-![](https://i.imgur.com/UiAiP1X.png)
+![](./img/ssh-keygen.png)
 You can restrict access to the key pair to yourself:
 ```bash
 chmod 400 ~/.ssh/my-ssh-key
@@ -46,7 +46,7 @@ When we use the SSH command, we connect via
 ```bash
 ssh -i ~/.ssh/my-ssh-key [USERNAME]@[IP_ADDRESS]
 ```
-![](https://i.imgur.com/I9fxz14.png)  
+![](./img/external-ip.png)  
 >
 >Note1: The username is the username of your Gmail account (username@gmail.com)  
 >Note2: You can find the `ip_address` in the instance details.
@@ -54,9 +54,9 @@ ssh -i ~/.ssh/my-ssh-key [USERNAME]@[IP_ADDRESS]
 
 ### Checking Whether Your Key is Stored on Google Cloud
 If you go to 'Metadata' in the menu now,
-![](https://i.imgur.com/j4trv3i.png)  
+![](./img/metadata.png)  
 and click on the SSH keys, ideally you should see the following interface  
-![](https://i.imgur.com/RakvuMs.png)  
+![](./img/ssh-keys.png)  
 This means that Google Compute Engine has stored your key. 
 If you hadn't created any instances in this project and made a connection, essentially there would be no key stored. 
 You can check the file content in the **`~/.ssh`** directory, and you should see `google_compute_engine.pub` and `google_compute_engine` files. 

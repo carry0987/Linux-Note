@@ -11,19 +11,19 @@ sidebar_position: 8
 
 1. **Create a Secret from a Literal Value:**
 
-   Use the `kubectl` command to create a secret directly from the command line with literal values:
+    Use the `kubectl` command to create a secret directly from the command line with literal values:
 
-   ```bash
-   kubectl create secret generic my-secret --from-literal=username=myuser --from-literal=password=mypassword -n my-namespace
-   ```
+    ```bash
+    kubectl create secret generic my-secret --from-literal=username=myuser --from-literal=password=mypassword -n my-namespace
+    ```
 
 2. **Create a Secret from a File:**
 
-   You can create a secret from files containing sensitive information:
+    You can create a secret from files containing sensitive information:
 
-   ```bash
-   kubectl create secret generic my-file-secret --from-file=config.json=/path/to/config.json -n my-namespace
-   ```
+    ```bash
+    kubectl create secret generic my-file-secret --from-file=config.json=/path/to/config.json -n my-namespace
+    ```
 
 ### View a Secret
 
@@ -45,20 +45,20 @@ Use these methods to update secrets:
 
 1. **Edit the Secret Directly:**
 
-   Be cautious as the data is base64 encoded:
+    Be cautious as the data is base64 encoded:
 
-   ```bash
-   kubectl edit secret my-secret -n my-namespace
-   ```
+    ```bash
+    kubectl edit secret my-secret -n my-namespace
+    ```
 
 2. **Recreate/Update a Secret:**
 
-   Delete the old secret and create it again with new data:
+    Delete the old secret and create it again with new data:
 
-   ```bash
-   kubectl delete secret my-secret -n my-namespace
-   kubectl create secret generic my-secret --from-literal=username=newuser --from-literal=password=newpassword -n my-namespace
-   ```
+    ```bash
+    kubectl delete secret my-secret -n my-namespace
+    kubectl create secret generic my-secret --from-literal=username=newuser --from-literal=password=newpassword -n my-namespace
+    ```
 
 ### Delete a Secret
 
@@ -81,9 +81,9 @@ kubectl get secrets -n my-namespace
 - Always specify `-n` to target the desired namespace, preventing unintended interactions with other resources.
 - If necessary, create namespaces prior to secret operations using:
 
-  ```bash
-  kubectl create namespace my-namespace
-  ```
+    ```bash
+    kubectl create namespace my-namespace
+    ```
 
 By understanding these commands, you'll effectively manage your Kubernetes secrets, ensuring sensitive data is securely handled within your cluster environments.
 
@@ -103,14 +103,14 @@ Use the following command to create a TLS type secret. This secret type is speci
 
 1. **Store TLS Certificate and Key**:
 
-   Use the `kubectl` command to create the secret, specifying the files for the certificate and key:
+    Use the `kubectl` command to create the secret, specifying the files for the certificate and key:
 
-   ```bash
-   kubectl create secret tls cloudflare-tls \
-    --cert=path/to/tls.crt \
-    --key=path/to/tls.key \
-    -n my-namespace
-   ```
+    ```bash
+    kubectl create secret tls cloudflare-tls \
+        --cert=path/to/tls.crt \
+        --key=path/to/tls.key \
+        -n my-namespace
+    ```
 
 ### Verify the Secret
 

@@ -9,7 +9,7 @@ As you can see in the following command, my system is having a network adapter c
 
 This is just the case of **VMware** environment, it may vary depends on the hardware but the steps to get back `ethX` will be the same.  
 
-```log
+```bash
 $ ip a
 1: lo: <loopback,up,lower_up> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -26,7 +26,7 @@ $ ip a
 ```
 
 From the `dmesg` command, you can see that the device got renamed during the system boot.
-```log
+```bash
 $ dmesg | grep -i eth
 [    3.050064] e1000 0000:02:01.0 eth0: (PCI:66MHz:32-bit) 00:0c:29:05:a3:e2
 [    3.050074] e1000 0000:02:01.0 eth0: Intel(R) PRO/1000 Network Connection
@@ -67,7 +67,7 @@ sudo reboot
 ```
 
 After the system reboot, just check whether you have an `ethX` back.
-```log
+```bash
 $ ip a
 1: lo: <loopback,up,lower_up> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00

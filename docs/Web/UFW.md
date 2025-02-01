@@ -69,18 +69,18 @@ sudo ufw disable
 
 ### Additional Commands for Specific Scenarios
 1. **Set Named Services**: Some services register with UFW, such as 'Nginx Full', which can be used to allow both HTTP and HTTPS.
-   ```bash
-   sudo ufw allow 'Nginx Full'
-   ```
+    ```bash
+    sudo ufw allow 'Nginx Full'
+    ```
 
 2. **Check Status with Details**: Verify the final status to ensure the settings are correct.
-   ```bash
-   sudo ufw status verbose
-   ```
+    ```bash
+    sudo ufw status verbose
+    ```
 
 3. **Logging**: Enable logging to monitor security issues.
-   ```bash
-   sudo ufw logging on
-   ```
+    ```bash
+    sudo ufw logging on
+    ```
 
 These commands will help effectively manage your server's UFW firewall rules, ensuring security and proper service operation.

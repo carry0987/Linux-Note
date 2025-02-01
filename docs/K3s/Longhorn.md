@@ -64,20 +64,20 @@ kubectl apply -f longhorn-pvc.yml
 ### Verify Installation
 
 1. **Check Longhorn Pods:**
-   Ensure all Longhorn components are running:
+    Ensure all Longhorn components are running:
 
-   ```bash
-   kubectl get pods -n longhorn-system
-   ```
+    ```bash
+    kubectl get pods -n longhorn-system
+    ```
 
 2. **Access the Longhorn UI:**
-   To use Longhorn's UI for management, use port forwarding to access it locally:
+    To use Longhorn's UI for management, use port forwarding to access it locally:
 
-   ```bash
-   kubectl -n longhorn-system port-forward svc/longhorn-frontend 8080:80
-   ```
+    ```bash
+    kubectl -n longhorn-system port-forward svc/longhorn-frontend 8080:80
+    ```
 
-   Then visit `http://localhost:8080` in your web browser.
+    Then visit `http://localhost:8080` in your web browser.
 
 ### Testing Longhorn
 

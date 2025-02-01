@@ -49,80 +49,80 @@ To fully verify the Cert-Manager installation, the best approach is to issue a t
 
 1. **Create Test Resources:**
 
-   Create a YAML file called `test-resources.yaml` with the following content:
+    Create a YAML file called `test-resources.yml` with the following content:
 
-   ```yaml
-   apiVersion: v1
-   kind: Namespace
-   metadata:
-     name: cert-manager-test
-   ---
-   apiVersion: cert-manager.io/v1
-   kind: Issuer
-   metadata:
-     name: test-selfsigned
-     namespace: cert-manager-test
-   spec:
-     selfSigned: {}
-   ---
-   apiVersion: cert-manager.io/v1
-   kind: Certificate
-   metadata:
-     name: selfsigned-cert
-     namespace: cert-manager-test
-   spec:
-     dnsNames:
-     - example.com
-     secretName: selfsigned-cert-tls
-     issuerRef:
-       name: test-selfsigned
-   ```
+    ```yaml
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: cert-manager-test
+    ---
+    apiVersion: cert-manager.io/v1
+    kind: Issuer
+    metadata:
+      name: test-selfsigned
+      namespace: cert-manager-test
+    spec:
+      selfSigned: {}
+    ---
+    apiVersion: cert-manager.io/v1
+    kind: Certificate
+    metadata:
+      name: selfsigned-cert
+      namespace: cert-manager-test
+    spec:
+      dnsNames:
+      - example.com
+      secretName: selfsigned-cert-tls
+      issuerRef:
+        name: test-selfsigned
+    ```
 
 2. **Apply the Test Resources:**
 
-   Apply the configuration to create the namespace, issuer, and certificate:
+    Apply the configuration to create the namespace, issuer, and certificate:
 
-   ```bash
-   kubectl apply -f test-resources.yaml
-   ```
+    ```bash
+    kubectl apply -f test-resources.yml
+    ```
 
 3. **Check the Certificate Status:**
 
-   After applying, check the status of the newly created certificate. You might need to wait a few seconds for cert-manager to process the certificate request.
+    After applying, check the status of the newly created certificate. You might need to wait a few seconds for cert-manager to process the certificate request.
 
-   ```bash
-   kubectl describe certificate selfsigned-cert -n cert-manager-test
-   ```
+    ```bash
+    kubectl describe certificate selfsigned-cert -n cert-manager-test
+    ```
 
-   You should see something like this in the output:
-   
-   ```
-   Spec:
-     Common Name: example.com
-     Issuer Ref:
-       Name: test-selfsigned
-     Secret Name: selfsigned-cert-tls
-   Status:
-     Conditions:
-       Last Transition Time: YYYY-MM-DDTHH:MM:SSZ
-       Message: Certificate is up to date and has not expired
-       Reason: Ready
-       Status: True
-       Type: Ready
-     Not After: YYYY-MM-DDTHH:MM:SSZ
-   Events:
-     Type    Reason     Age   From          Message
-     ----    ------     ----  ----          -------
-     Normal  CertIssued  4s    cert-manager  Certificate issued successfully
-   ```
+    You should see something like this in the output:
+
+    ```
+    Spec:
+      Common Name: example.com
+      Issuer Ref:
+        Name: test-selfsigned
+      Secret Name: selfsigned-cert-tls
+    Status:
+      Conditions:
+        Last Transition Time: YYYY-MM-DDTHH:MM:SSZ
+        Message: Certificate is up to date and has not expired
+        Reason: Ready
+        Status: True
+        Type: Ready
+      Not After: YYYY-MM-DDTHH:MM:SSZ
+    Events:
+      Type    Reason     Age   From          Message
+      ----    ------     ----  ----          -------
+      Normal  CertIssued  4s    cert-manager  Certificate issued successfully
+    ```
 
 4. **Clean Up the Test Resources:**
 
-   Once you've verified that the certificate is issued successfully, you can clean up the resources:
+    Once you've verified that the certificate is issued successfully, you can clean up the resources:
 
-   ```bash
-   kubectl delete -f test-resources.yaml
-   ```
+    ```bash
+    kubectl delete -f test-resources.yaml
+    ```
 
 If all the above steps complete without any errors, your Cert-Manager installation is functioning properly!
 
@@ -190,13 +190,13 @@ Below are the steps to create a secret for your Cloudflare API token and a Clust
 #### 1. Create a Cloudflare API Token
 
 1. **Log into Cloudflare**:  
-   Go to the [Cloudflare Dashboard](https://dash.cloudflare.com/) and navigate to **My Profile** → **API Tokens**.
+    Go to the [Cloudflare Dashboard](https://dash.cloudflare.com/) and navigate to **My Profile** → **API Tokens**.
 
 2. **Generate a Token**:  
-   Create an API token with `DNS:Edit`, `Zone:Read` (or broader) permission for the specific zone you will be validating.
+    Create an API token with `DNS:Edit`, `Zone:Read` (or broader) permission for the specific zone you will be validating.
 
 3. **Copy the Token**:  
-   After creating the token, copy it somewhere safe (e.g., `abc123xyz...`). You will need it in the next step.
+    After creating the token, copy it somewhere safe (e.g., `abc123xyz...`). You will need it in the next step.
 
 ---
 
