@@ -37,7 +37,8 @@ curl -sfL https://get.k3s.io | sh -s - server \
   --tls-san YOUR_SERVER_IP \
   --node-external-ip YOUR_EXTERNAL_IP \
   --disable traefik \
-  --cluster-init
+  --cluster-init \
+  --flannel-backend=wireguard-native
 ```
 
 ### Verify Installation
