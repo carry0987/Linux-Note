@@ -1,0 +1,8 @@
+{
+  "label": "Regular Command",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "Common/README"
+  }
+}

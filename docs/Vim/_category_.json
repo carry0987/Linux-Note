@@ -1,0 +1,8 @@
+{
+  "label": "Vim",
+  "position": 6,
+  "link": {
+    "type": "doc",
+    "id": "Vim/README"
+  }
+}
