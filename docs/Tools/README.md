@@ -9,9 +9,9 @@ title: Tools
 #### Installation:
 WGET
 ``` bash
-wget -N --no-cache --no-check-certificate https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Tools/tools.sh && chmod +x tools.sh && mv -v tools.sh /usr/local/bin/tools && bash tools
+wget -N --no-cache --no-check-certificate https://carry0987.github.io/Linux-Note/data/Tools/tools.sh && chmod +x tools.sh && mv -v tools.sh /usr/local/bin/tools && bash tools
 ```
 CURL
 ```bash
-curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Tools/tools.sh && chmod +x tools.sh && mv -v tools.sh /usr/local/bin/tools && bash tools
+curl -H 'Cache-Control: no-cache' -O https://carry0987.github.io/Linux-Note/data/Tools/tools.sh && chmod +x tools.sh && mv -v tools.sh /usr/local/bin/tools && bash tools
 ```
