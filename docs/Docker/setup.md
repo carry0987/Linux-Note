@@ -31,11 +31,11 @@ Directly use the following script for a quick setup, or follow the steps below f
 #### Quick Setup
 WGET
 ``` bash
-wget -N --no-cache --no-check-certificate https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Docker/docker-setup.sh && chmod +x docker-setup.sh && bash docker-setup.sh
+wget -N --no-cache --no-check-certificate https://carry0987.github.io/Linux-Note/data/Docker/docker-setup.sh && chmod +x docker-setup.sh && bash docker-setup.sh
 ```
 CURL
 ```bash
-curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Docker/docker-setup.sh && chmod +x docker-setup.sh && bash docker-setup.sh
+curl -H 'Cache-Control: no-cache' -O https://carry0987.github.io/Linux-Note/data/Docker/docker-setup.sh && chmod +x docker-setup.sh && bash docker-setup.sh
 ```
 
 #### Manual Setup

@@ -3,7 +3,7 @@
 set -e
 
 # Set variable
-repo_url='https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/qBittorrent/conf/qBittorrent-conf.zip'
+repo_url='https://carry0987.github.io/Linux-Note/data/qBittorrent/conf/qBittorrent-conf.zip'
 red='\033[0;31m'
 green='\033[0;32m'
 plain='\033[0m'

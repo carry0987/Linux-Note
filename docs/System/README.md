@@ -9,9 +9,9 @@ title: System
 #### Installation:
 WGET
 ``` bash
-wget -N --no-cache --no-check-certificate https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/System/swap.sh && chmod +x swap.sh && bash swap.sh
+wget -N --no-cache --no-check-certificate https://carry0987.github.io/Linux-Note/data/System/swap.sh && chmod +x swap.sh && bash swap.sh
 ```
 CURL
 ```bash
-curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/System/swap.sh && chmod +x swap.sh && bash swap.sh
+curl -H 'Cache-Control: no-cache' -O https://carry0987.github.io/Linux-Note/data/System/swap.sh && chmod +x swap.sh && bash swap.sh
 ```

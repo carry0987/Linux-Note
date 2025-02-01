@@ -10,9 +10,9 @@ sidebar_position: 2
 #### Installation:
 WGET
 ``` bash
-wget -N --no-cache --no-check-certificate https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Proxy/VPN/vpn.sh && chmod +x vpn.sh && bash vpn.sh
+wget -N --no-cache --no-check-certificate https://carry0987.github.io/Linux-Note/data/Proxy/VPN/vpn.sh && chmod +x vpn.sh && bash vpn.sh
 ```
 CURL
 ```bash
-curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Proxy/VPN/vpn.sh && chmod +x vpn.sh && bash vpn.sh
+curl -H 'Cache-Control: no-cache' -O https://carry0987.github.io/Linux-Note/data/Proxy/VPN/vpn.sh && chmod +x vpn.sh && bash vpn.sh
 ```

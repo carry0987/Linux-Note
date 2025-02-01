@@ -5,7 +5,7 @@ make_htoprc(){
     if [[ -f $1'htoprc' ]]; then
         rm -f "$1"'htoprc'
     fi
-    wget -P "$1" 'https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Htop/htoprc'
+    wget -P "$1" 'https://carry0987.github.io/Linux-Note/data/Htop/htoprc'
 }
 
 # Setup htop colorscheme

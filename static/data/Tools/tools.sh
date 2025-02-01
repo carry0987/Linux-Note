@@ -12,7 +12,7 @@ set -e
 
 #Set variable
 sh_ver='1.1.1'
-repo_url='https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Tools/tools.sh'
+repo_url='https://carry0987.github.io/Linux-Note/data/Tools/tools.sh'
 red='\033[0;31m'
 green='\033[0;32m'
 yellow='\033[0;33m'

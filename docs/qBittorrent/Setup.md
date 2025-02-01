@@ -111,11 +111,11 @@ sudo systemctl daemon-reload
 Step 7: Add default config file for qbittorrent-nox on Ubuntu
 WGET
 ``` bash
-wget -N --no-cache --no-check-certificate https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/qBittorrent/setup-qbttorrent-conf.sh && chmod +x setup-qbttorrent-conf.sh && bash setup-qbttorrent-conf.sh
+wget -N --no-cache --no-check-certificate https://carry0987.github.io/Linux-Note/data/qBittorrent/setup-qbttorrent-conf.sh && chmod +x setup-qbttorrent-conf.sh && bash setup-qbttorrent-conf.sh
 ```
 CURL
 ```bash
-curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/qBittorrent/setup-qbttorrent-conf.sh && chmod +x setup-qbttorrent-conf.sh && bash setup-qbttorrent-conf.sh
+curl -H 'Cache-Control: no-cache' -O https://carry0987.github.io/Linux-Note/data/qBittorrent/setup-qbttorrent-conf.sh && chmod +x setup-qbttorrent-conf.sh && bash setup-qbttorrent-conf.sh
 ```
 
 Step 8: Start and Enable qbittorrent-nox Service on Ubuntu

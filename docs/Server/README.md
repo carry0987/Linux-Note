@@ -9,9 +9,9 @@ title: Server
 #### Installation:
 WGET
 ``` bash
-wget -N --no-cache --no-check-certificate https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Server/bbr.sh && chmod +x bbr.sh && bash bbr.sh
+wget -N --no-cache --no-check-certificate https://carry0987.github.io/Linux-Note/data/Server/bbr.sh && chmod +x bbr.sh && bash bbr.sh
 ```
 CURL
 ```bash
-curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Server/bbr.sh && chmod +x bbr.sh && bash bbr.sh
+curl -H 'Cache-Control: no-cache' -O https://carry0987.github.io/Linux-Note/data/Server/bbr.sh && chmod +x bbr.sh && bash bbr.sh
 ```

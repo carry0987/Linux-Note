@@ -9,11 +9,11 @@ title: Setup
 #### Installation:
 WGET
 ``` bash
-wget -N --no-cache --no-check-certificate https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Setup/Set-LC.sh && chmod +x Set-LC.sh && bash Set-LC.sh
+wget -N --no-cache --no-check-certificate https://carry0987.github.io/Linux-Note/data/Setup/Set-LC.sh && chmod +x Set-LC.sh && bash Set-LC.sh
 ```
 CURL
 ```bash
-curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Setup/Set-LC.sh && chmod +x Set-LC.sh && bash Set-LC.sh
+curl -H 'Cache-Control: no-cache' -O https://carry0987.github.io/Linux-Note/data/Setup/Set-LC.sh && chmod +x Set-LC.sh && bash Set-LC.sh
 ```
 
 ### Install-Main-Pkg.sh
@@ -23,9 +23,9 @@ curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/carry0987
 #### Installation:
 WGET
 ``` bash
-wget -N --no-cache --no-check-certificate https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Setup/Install-Main-Pkg.sh && chmod +x Install-Main-Pkg.sh && bash Install-Main-Pkg.sh
+wget -N --no-cache --no-check-certificate https://carry0987.github.io/Linux-Note/data/Setup/Install-Main-Pkg.sh && chmod +x Install-Main-Pkg.sh && bash Install-Main-Pkg.sh
 ```
 CURL
 ```bash
-curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Setup/Install-Main-Pkg.sh && chmod +x Install-Main-Pkg.sh && bash Install-Main-Pkg.sh
+curl -H 'Cache-Control: no-cache' -O https://carry0987.github.io/Linux-Note/data/Setup/Install-Main-Pkg.sh && chmod +x Install-Main-Pkg.sh && bash Install-Main-Pkg.sh
 ```

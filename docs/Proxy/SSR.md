@@ -21,11 +21,11 @@ If you want to get location of IP, you should get the token from [IP-Info](https
 #### Installation
 WGET
 ``` bash
-wget -N --no-cache --no-check-certificate https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Proxy/SSR/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+wget -N --no-cache --no-check-certificate https://carry0987.github.io/Linux-Note/data/Proxy/SSR/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 ```
 CURL
 ```bash
-curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/carry0987/Linux-Note/master/docs/Proxy/SSR/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+curl -H 'Cache-Control: no-cache' -O https://carry0987.github.io/Linux-Note/data/Proxy/SSR/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 ```
 
 #### Firewall
