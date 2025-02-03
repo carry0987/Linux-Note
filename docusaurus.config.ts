@@ -105,28 +105,28 @@ const config: Config = {
             playgroundPosition: 'bottom',
         },
         // Optional: Algolia search integration, if you don't need it, you can remove this section
-        // algolia: {
-        //     // The application ID provided by Algolia
-        //     appId: 'TLWF61FQC2',
-        //     // Public API key: it is safe to commit it
-        //     apiKey: '6ec45419a7334dddfbff735d9c6ccf54',
-        //     indexName: 'carry0987io',
-        //     // Optional: see doc section below
-        //     contextualSearch: true,
-        //     // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        //     externalUrlRegex: 'external\\.com|domain\\.com',
-        //     // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-        //     replaceSearchResultPathname: {
-        //         from: '/docs/', // or as RegExp: /\/docs\//
-        //         to: '/docs/',
-        //     },
-        //     // Optional: Algolia search parameters
-        //     searchParameters: {},
-        //     // Optional: path for search page that enabled by default (`false` to disable it)
-        //     searchPagePath: 'search',
-        //     // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
-        //     insights: false,
-        // },
+        algolia: {
+            // The application ID provided by Algolia
+            appId: 'QD9ONUTNCR',
+            // Public API key: it is safe to commit it
+            apiKey: 'd77abf82f13a78ecac82795cd03cff1a',
+            indexName: 'carry0987io',
+            // Optional: see doc section below
+            contextualSearch: true,
+            // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+            externalUrlRegex: 'external\\.com|domain\\.com',
+            // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+            replaceSearchResultPathname: {
+                from: '/docs/', // or as RegExp: /\/docs\//
+                to: '/docs/',
+            },
+            // Optional: Algolia search parameters
+            searchParameters: {},
+            // Optional: path for search page that enabled by default (`false` to disable it)
+            searchPagePath: 'search',
+            // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+            insights: false,
+        }
     } satisfies Preset.ThemeConfig,
     themes: ['@docusaurus/theme-live-codeblock'],
 };
