@@ -15,7 +15,7 @@ sudo swapoff -a
 ```
 
 2. To permanently disable swap, edit the `/etc/fstab` file and comment out (add `#` at the beginning) the line that contains the swap partition:
-```bash
+```
 #/swapfile swap swap defaults 0 0
 ```
 The above is an example line. Adjust it according to your system's configuration. After editing, reboot the system.
