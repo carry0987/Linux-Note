@@ -11,9 +11,9 @@ Helm is a package manager for Kubernetes. It is a tool that streamlines installi
 
 1. **Adding Helm GPG Key to Keyrings**
     ```bash
-    curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+    curl -fsSL https://packages.buildkite.com/helm-linux/helm-debian/gpgkey | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
     ```
-    - `curl https://baltocdn.com/helm/signing.asc`: Downloads the Helm signing key using `curl`.
+    - `curl -fsSL https://packages.buildkite.com/helm-linux/helm-debian/gpgkey`: Downloads the Helm signing key from Buildkite using `curl`.
     - `| gpg --dearmor`: Pipes the downloaded key into `gpg` to convert the ASCII key into a binary format.
     - `| sudo tee /usr/share/keyrings/helm.gpg > /dev/null`: Writes the binary key to `/usr/share/keyrings/helm.gpg`, effectively adding the Helm keyring to the system's list of trusted keys. `> /dev/null` sends any output messages to a null device, suppressing them from appearing in the terminal.
 
@@ -25,9 +25,9 @@ Helm is a package manager for Kubernetes. It is a tool that streamlines installi
 
 3. **Adding Helm Repository to Sources List**
     ```bash
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+    echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://packages.buildkite.com/helm-linux/helm-debian/any/ any main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
     ```
-    - `echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main"`: Constructs a new source list entry. The architecture is dynamically set using `$(dpkg --print-architecture)`, and the entry is signed by the previously added Helm GPG key.
+    - `echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://packages.buildkite.com/helm-linux/helm-debian/any/ any main"`: Constructs a new source list entry signed by the previously added Helm GPG key.
     - `| sudo tee /etc/apt/sources.list.d/helm-stable-debian.list`: Writes the new source list entry to `/etc/apt/sources.list.d/helm-stable-debian.list`, making the Helm repository available to `apt`.
 
 4. **Updating Package List**
