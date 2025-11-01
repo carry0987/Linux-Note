@@ -40,7 +40,7 @@ curl -sfL https://get.k3s.io | sh -s - server \
     --disable traefik \
     --disable servicelb \
     --cluster-init \
-    --flannel-backend=wireguard-native
+    --flannel-iface tailscale0 # Optional, if you have Tailscale installed and want to use it for pod networking
 ```
 
 ### Verify Installation
