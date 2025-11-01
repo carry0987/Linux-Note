@@ -139,6 +139,7 @@ To add a new node to your existing K3s cluster, perform the following:
     curl -sfL https://get.k3s.io | sh -s - agent \
         --node-name worker-1 \
         --server https://<your_k3s_server_ip>:6443 \
+        --flannel-iface tailscale0 \ # Optional, if you have Tailscale installed and want to use it for pod networking
         --token <your_k3s_server_token>
     ```
 
