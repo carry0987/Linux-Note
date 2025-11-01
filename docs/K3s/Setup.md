@@ -38,6 +38,7 @@ curl -sfL https://get.k3s.io | sh -s - server \
     --tls-san YOUR_SERVER_IP \
     --node-external-ip YOUR_EXTERNAL_IP \ # Optional, if you want to connect to the server from outside directly
     --disable traefik \
+    --disable servicelb \
     --cluster-init \
     --flannel-backend=wireguard-native
 ```
