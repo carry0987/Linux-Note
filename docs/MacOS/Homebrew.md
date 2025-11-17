@@ -1,5 +1,5 @@
 ---
-title: Installing Homebrew
+title: Homebrew
 ---
 
 ## What is Homebrew?

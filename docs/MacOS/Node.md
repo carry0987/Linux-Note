@@ -1,5 +1,5 @@
 ---
-title: Installing Node.js on macOS
+title: Node.js
 ---
 
 ## Prerequisites
