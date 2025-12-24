@@ -112,7 +112,7 @@ services:
 ```yml
 services:
   postgres:
-    image: postgres:11-alpine
+    image: postgres:17-alpine
     restart: always
     environment:
       - POSTGRES_USER
