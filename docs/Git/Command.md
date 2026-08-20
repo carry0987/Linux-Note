@@ -46,10 +46,18 @@ Because the following commands do not use `--global`, they apply to the current 
 ```bash
 personal_account() {
    git config gpg.program "$(which gpg)"
-   git config user.signingkey YOUR_SIGNING_KEY_ID
+   git config user.signingkey YOUR_PERSONAL_SIGNING_KEY_ID
    git config commit.gpgsign true
-   git config user.name "Your Name"
-   git config user.email "123456+username@users.noreply.github.com"
+   git config user.name "Your Personal Name"
+   git config user.email "123456+personal-account@users.noreply.github.com"
+}
+
+work_account() {
+   git config gpg.program "$(which gpg)"
+   git config user.signingkey YOUR_WORK_SIGNING_KEY_ID
+   git config commit.gpgsign true
+   git config user.name "Your Work Name"
+   git config user.email "work-account@example.com"
 }
 ```
 
@@ -58,7 +66,16 @@ Example usage:
 ```bash
 personal_account
 git config --list | grep '^user\.'
+
+work_account
+git config --list | grep '^user\.'
 ```
+
+Why avoid `--global` here:
+
+- one machine may contain repositories for different identities
+- a global change would affect every repository on the machine
+- repository-level config lets you switch only the current project without breaking commit identity elsewhere
 
 In a personal setup, the function name may reflect the account name, such as `carry()`. For documentation, it is better to use names like `personal_account()` or `work_account()` so the purpose is immediately clear.
 
