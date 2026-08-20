@@ -30,6 +30,28 @@ After creating an orphan branch, all files remain in the working directory (in s
 git rm -rf .
 ```
 
+If you create orphan branches for GitHub Pages often, you can wrap the two setup steps in a helper function:
+
+```bash
+gh-pages() {
+    echo 'This is a script to create a gh-pages branch in a git repository.'
+    echo 'It will create an orphan branch and remove all the files in the branch.'
+    echo 'Please make sure you have committed all the changes before running this script.'
+    read -r '?Do you want to continue? [Y/N] >' response
+
+    if [[ $response =~ ^([Yy])+$ ]]; then
+        git checkout --orphan gh-pages
+        git rm -rf .
+    elif [[ $response =~ ^([Nn])+$ ]]; then
+        echo 'You have chosen not to continue, exiting...'
+    else
+        echo 'You can only choose yes or no'
+    fi
+}
+```
+
+This helper only prepares the orphan branch. You still need to add new content, commit it, and push the branch.
+
 ### Step 3: Add New Content
 
 Now you can add new files to this branch:
@@ -186,6 +208,7 @@ git push origin --delete gh-pages
 - The working directory content changes completely when switching branches
 - Make sure to commit or stash your changes before switching branches
 - Orphan branches are perfect for hosting static content unrelated to the main codebase
+- A helper like `gh-pages()` is convenient, but it still performs destructive cleanup in the working tree after confirmation
 
 ## References
 

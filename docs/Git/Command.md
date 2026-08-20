@@ -37,6 +37,31 @@ git config --list
 git config --global init.defaultBranch main
 ```
 
+### Switching Git Identity for Signed Commits
+
+If one machine is used for multiple GitHub accounts, a helper function can switch the current repository to the correct identity while keeping signed commits enabled.
+
+Because the following commands do not use `--global`, they apply to the current repository only.
+
+```bash
+personal_account() {
+   git config gpg.program "$(which gpg)"
+   git config user.signingkey YOUR_SIGNING_KEY_ID
+   git config commit.gpgsign true
+   git config user.name "Your Name"
+   git config user.email "123456+username@users.noreply.github.com"
+}
+```
+
+Example usage:
+
+```bash
+personal_account
+git config --list | grep '^user\.'
+```
+
+In a personal setup, the function name may reflect the account name, such as `carry()`. For documentation, it is better to use names like `personal_account()` or `work_account()` so the purpose is immediately clear.
+
 ---
 
 ## 2. Working with Changes
@@ -420,6 +445,31 @@ git reset --hard <commit>
 # Reset to remote state
 git reset --hard origin/main
 ```
+
+### Reset Helper for Local History Rewrite
+
+If you frequently need to discard the latest local commits and then update the remote branch, you can wrap the workflow in a helper.
+
+Use this only when you fully understand the impact of rewriting history.
+
+```bash
+git_reset() {
+   read 'commit_val?Enter the value for the number of commit which you want to reset >'
+
+   if [[ -n $commit_val ]]; then
+      git reset --hard HEAD~$commit_val
+      git push --force
+   fi
+}
+```
+
+Warnings:
+
+- this discards commits from the current branch
+- this force-pushes rewritten history to the remote branch
+- do not use it on shared branches unless everyone involved expects history to be rewritten
+
+If the branch is collaborative, `git push --force-with-lease` is usually safer than `git push --force`.
 
 ### Revert
 ```bash

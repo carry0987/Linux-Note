@@ -3,6 +3,8 @@ title: zshrc
 sidebar_position: 1
 ---
 
+If you want to keep helper commands in your shell configuration, see [Run CLI Tools with Docker](./TerminalHelpers.md). That guide shows how to source a helper file from `~/.zshrc` and use Docker-backed functions such as `php` and `composer`.
+
 ```bash
 source ~/.zprofile
 PROMPT='%F{033}%n%F{reset}@%F{green}%m:%F{yellow}%B%~%b%F{reset}$ %F{reset}'
@@ -39,3 +41,7 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 
 alias history="history 0"
 ```
+
+## Related
+
+- [Run CLI Tools with Docker](./TerminalHelpers.md)
