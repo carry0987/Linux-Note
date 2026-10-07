@@ -15,7 +15,7 @@ make_vimrc(){
         echo 'syntax on' >> $1'.vimrc'
         echo 'colorscheme monokai' >> $1'.vimrc'
     else
-        wget -P $1 'https://carry0987.github.io/Linux-Note/data/Vim/.vimrc'
+        wget -O $1'.vimrc' 'https://carry0987.github.io/Linux-Note/data/Vim/vimrc'
     fi
 }
 
