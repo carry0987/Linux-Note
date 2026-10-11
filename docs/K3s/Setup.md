@@ -9,6 +9,12 @@ To install K3s on a Linux machine, you can follow the official installation guid
 ### Disable swap
 In order to effectively proceed with the installation and setup of K3s, it's recommended to disable swap on your Linux machine. Kubernetes does not recommend using swap due to potential issues with resource management. Here are the commands to disable swap:
 
+:::caution
+
+Disabling swap can affect memory pressure handling on the host. Verify the correct `/etc/fstab` entry before editing it, and ensure the system has sufficient RAM for its workloads.
+
+:::
+
 1. Temporarily disable swap:
 ```bash
 sudo swapoff -a
@@ -23,6 +29,12 @@ You can now continue with the K3s installation.
 
 ### Setup
 Install K3s using the script provided by Rancher. This will install and configure a lightweight Kubernetes cluster.
+
+:::caution
+
+This command downloads and executes an installation script from the network. Review the script and pin a specific K3s version before using it in a production environment.
+
+:::
 
 ```bash
 curl -sfL https://get.k3s.io | sh -
@@ -65,6 +77,12 @@ kubectl get pods -n kube-system
 #### Disable UFW (Uncomplicated Firewall)
 
 For a straightforward setup of K3s, it is common to disable UFW to avoid any issues with network traffic and port access. If you choose this approach, execute the following:
+
+:::warning
+
+Disabling UFW permits all inbound traffic that is not restricted elsewhere. Prefer the firewall rules in the next section for internet-connected or production systems.
+
+:::
 
 ```bash
 sudo ufw disable

@@ -6,6 +6,12 @@ sidebar_position: 2
 # Enable `sudo` without password in Ubuntu/Debian
 You probably know that in Ubuntu/Debian, you should not run as the **root** user, but should use the **`sudo`** command instead to run commands that require **root** privileges. However, it can also be inconvenient to have to enter your password every time that you use sudo. Here’s a quick fix that removes the requirement to enter you password for sudo.
 
+:::danger
+
+`NOPASSWD:ALL` grants anyone who can use this account unrestricted root access without authentication. Use it only for a tightly controlled account, and prefer narrowly scoped `sudoers` rules when possible.
+
+:::
+
 ## Step
 1. Open the `/etc/sudoers` file (as **root**, of course!) by running:
 ```bash

@@ -11,6 +11,12 @@ To integrate ExternalDNS with your K3s cluster using Cloudflare, follow these st
 
     You'll need a Cloudflare API token with the necessary permissions (Zone:Read, DNS:Edit). Replace `YOUR_API_TOKEN` with your Cloudflare API token.
 
+  :::caution
+
+  A Kubernetes Secret is base64-encoded, not encrypted by default. Use a least-privilege API token and enable encryption at rest or use an external secret manager for production clusters.
+
+  :::
+
     ```bash
     kubectl create secret generic cloudflare-api-key --from-literal=apiKey=YOUR_API_TOKEN -n kube-system
     ```

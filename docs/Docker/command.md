@@ -105,6 +105,12 @@ After completing these steps, your image will have two tags: `specific_tag` and 
 ### Clean up docker
 If you're looking for ways to clean up your `Docker` environment, below are some commands that can help.
 
+:::caution
+
+The commands in this section stop containers or permanently remove Docker resources. Review the listed containers, volumes, and images first, especially when the host runs production workloads.
+
+:::
+
 1. Stop all running containers
 `$(docker container ls -a -q)` will return all container IDs (including those that have been stopped)
     ```bash

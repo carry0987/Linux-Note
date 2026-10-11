@@ -106,6 +106,12 @@ helm show values istio/<chart-name>
 
 ## Uninstall Istio
 
+:::warning
+
+Removing Istio stops the service mesh and ingress components. Applications that depend on Istio routing, Gateway resources, or sidecar injection can become unreachable; plan and test the rollback before removal.
+
+:::
+
 To remove Istio from your cluster, follow these steps:
 
 1. Check installed Istio charts:

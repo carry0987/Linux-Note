@@ -161,11 +161,43 @@ history -p
 - `-r Treats all subdirectories under the specified directory together with the file`
 - `-P Set the compression password`
 
+### Examples
+
+Create one archive containing multiple folders and files:
+
+```bash
+zip -r backup.zip documents photos report.pdf
+```
+
+Create one archive for each folder:
+
+```bash
+for folder in project-a project-b; do
+  zip -r "${folder}.zip" "$folder"
+done
+```
+
+Create one archive for each file that matches a pattern:
+
+```bash
+for file in *.log; do
+  zip "${file%.log}.zip" "$file"
+done
+```
+
 ## Unzip
 **unzip**
 - `-l Show the files whitch contained in the compressed file`
 - `-t Check if the compressed file is correct`
 - `-P<password> Unzip files with password`
+
+### Example
+
+Extract an archive into a specific directory:
+
+```bash
+unzip backup.zip -d restored-files
+```
 
 ## Terminal
 - **Ctrl + Alt + F2 = Terminal**

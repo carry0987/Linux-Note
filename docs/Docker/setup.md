@@ -28,6 +28,12 @@ sudo systemctl disable containerd
 You can set up the Docker daemon to run without root privileges. This is a good way to avoid using `sudo` when you use the `docker` command.  
 Directly use the following script for a quick setup, or follow the steps below for manual operation.  
 
+:::warning
+
+Membership in the `docker` group is effectively equivalent to root access because Docker can mount host filesystems and run privileged containers. Add only trusted users to this group.
+
+:::
+
 #### Quick Setup
 WGET
 ``` bash

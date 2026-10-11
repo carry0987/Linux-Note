@@ -26,6 +26,13 @@ sudo apt purge qbittorrent qbittorrent-nox -y
 
 #### Remove qBittorrent Data and Configuration Files
 To remove the qBittorrent data and configuration files, use the following commands:
+
+:::danger
+
+These commands permanently delete the current user's qBittorrent settings and local data. Back up any files that must be retained before continuing.
+
+:::
+
 ```bash
 rm -rf ~/.config/qBittorrent
 rm -rf ~/.local/share/data/qBittorrent
@@ -33,6 +40,13 @@ rm -rf ~/.local/share/data/qBittorrent
 
 #### Remove qBittorrent User and Group
 To remove the qBittorrent user and group, use the following commands:
+
+:::warning
+
+`--remove-home` deletes the user's home directory. Stop dependent services and confirm that no required data belongs to `qbtuser` before running this command.
+
+:::
+
 ```bash
 sudo deluser --remove-home qbtuser
 ```

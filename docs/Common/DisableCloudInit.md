@@ -8,6 +8,12 @@ This step-by-step tutorial will guide you on how to remove `cloud-init` and `una
 
 If you no longer need `cloud-init` and `unattended-upgrades`, here is how to remove them and ensure your instance is in a desired state.
 
+:::danger
+
+Removing `cloud-init` can prevent a cloud provider from applying boot-time network, SSH key, user, or metadata configuration. Back up the instance and confirm that you have another way to access it before proceeding.
+
+:::
+
 ## Step 1: Remove `cloud-init`
 First, we need to purg `cloud-init`. Purging will not only remove the package but also the config files. Enter the following command in your terminal:
 

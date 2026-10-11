@@ -9,6 +9,12 @@ As you can see in the following command, my system is having a network adapter c
 
 This is just the case of **VMware** environment, it may vary depends on the hardware but the steps to get back `ethX` will be the same.  
 
+:::warning
+
+Changing interface names can break network configuration and disconnect remote sessions after the reboot. Ensure you have console access and update any configuration that refers to the current interface name.
+
+:::
+
 ```bash
 $ ip a
 1: lo: <loopback,up,lower_up> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1

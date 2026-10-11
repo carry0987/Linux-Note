@@ -5,6 +5,12 @@ sidebar_position: 2
 
 ## How to Remove K3s
 
+:::danger
+
+Uninstalling K3s removes cluster configuration and can permanently remove local cluster state. Back up persistent workload data and any required Kubernetes resources before continuing.
+
+:::
+
 ### Stop K3s Services
 To completely remove K3s from your Linux system, ensure that all related services are stopped and configurations are cleared.
 

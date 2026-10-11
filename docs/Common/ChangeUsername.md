@@ -23,6 +23,13 @@ whoami
 2. **Change the Username**
 Once you have identified the account's current username, you can use the usermod command to change it.  
 The usermod command allows you to modify various attributes of a user account, including the username. The syntax for the usermod command to change the username is as follows:
+
+:::caution
+
+Do not rename an account from an active session for that account. Sign in with a different administrator account or use a console session, and ensure no processes are using the old home directory.
+
+:::
+
 ```bash
 sudo usermod -l new_username old_username
 ```

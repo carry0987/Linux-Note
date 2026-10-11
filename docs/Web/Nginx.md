@@ -34,6 +34,13 @@ Nginx HTTP (v6)            ALLOW       Anywhere (v6)
 ```
 
 ### If need `www-data` permission
+
+:::caution
+
+These recursive ownership and permission changes apply to every site under `/var/www/` and can change access for existing deployments. Limit the command to a specific site directory when possible.
+
+:::
+
 ```bash
 sudo usermod -a -G www-data $USER
 sudo chown -R www-data:www-data /var/www/

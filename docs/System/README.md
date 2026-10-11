@@ -2,16 +2,12 @@
 title: System
 ---
 
-### swap.sh
-- Description: Swap Easy Setup Tool
-- Support OS: Debian 6+ / Ubuntu 14+
+## Storage
 
-#### Installation:
-WGET
-``` bash
-wget -N --no-cache --no-check-certificate https://carry0987.github.io/Linux-Note/data/System/swap.sh && chmod +x swap.sh && bash swap.sh
-```
-CURL
-```bash
-curl -H 'Cache-Control: no-cache' -O https://carry0987.github.io/Linux-Note/data/System/swap.sh && chmod +x swap.sh && bash swap.sh
-```
+- [Add and Mount a New Disk with parted](./AddDiskParted.md) (recommended)
+- [Add and Mount a New Disk with fdisk](./AddDiskFdisk.md)
+- [Expand an Ubuntu LVM Volume](./ExpandLVM.md)
+
+## Memory
+
+- [Swap Easy Setup Tool](./Swap.md)

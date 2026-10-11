@@ -4,6 +4,13 @@ sidebar_position: 1
 ---
 
 ### Enable UFW
+
+:::warning
+
+When connected remotely over SSH, allow the actual SSH port before enabling UFW and keep the current SSH session open until a second session has connected successfully. Otherwise, you can lock yourself out of the server.
+
+:::
+
 Before enabling UFW, ensure that OpenSSH is allowed to prevent being locked out of your server:
 ```bash
 sudo ufw allow OpenSSH
@@ -57,6 +64,13 @@ sudo ufw delete allow 'Nginx HTTP'
 
 ### Reset UFW
 Reset UFW to the default state; all rules will be deleted:
+
+:::caution
+
+`ufw reset` deletes every existing firewall rule. Record any required rules before resetting the firewall.
+
+:::
+
 ```bash
 sudo ufw reset
 ```
