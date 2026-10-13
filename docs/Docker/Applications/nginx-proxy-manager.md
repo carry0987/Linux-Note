@@ -68,7 +68,7 @@ Scheme: http
 Forward Hostname / IP: npm
 Forward Port: 81
 ```
-![](./img/detail.png)
+![](../img/detail.png)
 
 3. Remove the default port **`81`** from docker-compose.yml
 ```yaml

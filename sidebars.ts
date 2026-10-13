@@ -24,18 +24,46 @@ const sidebars: SidebarsConfig = {
             label: 'Common',
             link: { type: 'doc', id: 'Common/README' },
             items: [
-                'Common/CommandList',
-                'Common/Sudo',
-                'Common/ChangeUsername',
-                'Common/ChangeNetworkInterfaceName',
-                'Common/DisableCloudInit',
+                {
+                    type: 'category',
+                    label: 'Administration',
+                    items: ['Common/Administration/CommandList', 'Common/Administration/Sudo'],
+                },
+                {
+                    type: 'category',
+                    label: 'Accounts and Networking',
+                    items: [
+                        'Common/AccountsAndNetworking/ChangeUsername',
+                        'Common/AccountsAndNetworking/ChangeNetworkInterfaceName',
+                    ],
+                },
+                {
+                    type: 'category',
+                    label: 'Cloud Images',
+                    items: ['Common/CloudImages/DisableCloudInit'],
+                },
             ],
         },
         {
             type: 'category',
             label: 'System',
             link: { type: 'doc', id: 'System/README' },
-            items: ['System/AddDiskParted', 'System/AddDiskFdisk', 'System/ExpandLVM', 'System/Swap'],
+            items: [
+                {
+                    type: 'category',
+                    label: 'Storage',
+                    items: [
+                        'System/Storage/AddDiskParted',
+                        'System/Storage/AddDiskFdisk',
+                        'System/Storage/ExpandLVM',
+                    ],
+                },
+                {
+                    type: 'category',
+                    label: 'Memory',
+                    items: ['System/Memory/Swap'],
+                },
+            ],
         },
         {
             type: 'category',
@@ -54,19 +82,40 @@ const sidebars: SidebarsConfig = {
             label: 'MacOS',
             link: { type: 'doc', id: 'MacOS/Config' },
             items: [
-                'MacOS/Homebrew',
-                'MacOS/Node',
-                'MacOS/zshrc',
-                'MacOS/TerminalHelpers',
-                'MacOS/screenrc',
-                'MacOS/tftp',
+                {
+                    type: 'category',
+                    label: 'Development',
+                    items: ['MacOS/Development/Homebrew', 'MacOS/Development/Node'],
+                },
+                {
+                    type: 'category',
+                    label: 'Terminal',
+                    items: [
+                        'MacOS/Terminal/zshrc',
+                        'MacOS/Terminal/TerminalHelpers',
+                        'MacOS/Terminal/screenrc',
+                    ],
+                },
+                {
+                    type: 'category',
+                    label: 'Networking',
+                    items: ['MacOS/Networking/tftp'],
+                },
             ],
         },
         {
             type: 'category',
             label: 'Git',
             link: { type: 'doc', id: 'Git/README' },
-            items: ['Git/Command', 'Git/GPGSigning', 'Git/OrphanBranch'],
+            items: [
+                'Git/Command',
+                {
+                    type: 'category',
+                    label: 'GPG Signing',
+                    items: ['Git/GPGSigning', 'Git/GPG/Setup', 'Git/GPG/Identities', 'Git/GPG/Signing'],
+                },
+                'Git/OrphanBranch',
+            ],
         },
         {
             type: 'category',
@@ -96,7 +145,13 @@ const sidebars: SidebarsConfig = {
             type: 'category',
             label: 'Web',
             link: { type: 'doc', id: 'Web/UFW' },
-            items: ['Web/Nginx', 'Web/LetsEncrypt'],
+            items: [
+                {
+                    type: 'category',
+                    label: 'Web Server',
+                    items: ['Web/WebServer/Nginx', 'Web/WebServer/LetsEncrypt'],
+                },
+            ],
         },
         {
             type: 'category',
@@ -108,22 +163,53 @@ const sidebars: SidebarsConfig = {
             type: 'category',
             label: 'Docker',
             link: { type: 'doc', id: 'Docker/setup' },
-            items: ['Docker/command', 'Docker/portainer', 'Docker/nginx-proxy-manager', 'Docker/n8n'],
+            items: [
+                {
+                    type: 'category',
+                    label: 'Core',
+                    items: ['Docker/Core/command'],
+                },
+                {
+                    type: 'category',
+                    label: 'Applications',
+                    items: [
+                        'Docker/Applications/portainer',
+                        'Docker/Applications/nginx-proxy-manager',
+                        'Docker/Applications/n8n',
+                    ],
+                },
+            ],
         },
         {
             type: 'category',
             label: 'K3s',
             link: { type: 'doc', id: 'K3s/Setup' },
             items: [
-                'K3s/CommandList',
-                'K3s/Helm',
-                'K3s/MetalLB',
-                'K3s/CertManager',
-                'K3s/Longhorn',
-                'K3s/ExternalDNS',
-                'K3s/Istio',
-                'K3s/Secret',
-                'K3s/Uninstall',
+                {
+                    type: 'category',
+                    label: 'Core',
+                    items: ['K3s/Core/CommandList', 'K3s/Core/Helm'],
+                },
+                {
+                    type: 'category',
+                    label: 'Networking and Ingress',
+                    items: [
+                        'K3s/NetworkingAndIngress/MetalLB',
+                        'K3s/NetworkingAndIngress/ExternalDNS',
+                        'K3s/NetworkingAndIngress/Istio',
+                        'K3s/NetworkingAndIngress/CertManager',
+                    ],
+                },
+                {
+                    type: 'category',
+                    label: 'Storage and Secrets',
+                    items: ['K3s/StorageAndSecrets/Longhorn', 'K3s/StorageAndSecrets/Secret'],
+                },
+                {
+                    type: 'category',
+                    label: 'Maintenance',
+                    items: ['K3s/Maintenance/Uninstall'],
+                },
             ],
         },
         {
@@ -131,14 +217,26 @@ const sidebars: SidebarsConfig = {
             label: 'Crontab',
             link: { type: 'doc', id: 'Crontab/README' },
             items: [
-                'Crontab/what_is_cron',
-                'Crontab/syntax',
-                'Crontab/example',
-                'Crontab/commands',
-                'Crontab/environment',
-                'Crontab/restrictions',
-                'Crontab/file_location',
-                'Crontab/log_file_and_disable_email',
+                {
+                    type: 'category',
+                    label: 'Getting Started',
+                    items: [
+                        'Crontab/GettingStarted/what_is_cron',
+                        'Crontab/GettingStarted/syntax',
+                        'Crontab/GettingStarted/example',
+                    ],
+                },
+                {
+                    type: 'category',
+                    label: 'Reference',
+                    items: [
+                        'Crontab/Reference/commands',
+                        'Crontab/Reference/environment',
+                        'Crontab/Reference/restrictions',
+                        'Crontab/Reference/file_location',
+                        'Crontab/Reference/log_file_and_disable_email',
+                    ],
+                },
             ],
         },
         {
