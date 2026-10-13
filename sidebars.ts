@@ -114,6 +114,11 @@ const sidebars: SidebarsConfig = {
                     label: 'GPG Signing',
                     items: ['Git/GPGSigning', 'Git/GPG/Setup', 'Git/GPG/Identities', 'Git/GPG/Signing'],
                 },
+                {
+                    type: 'category',
+                    label: 'SSH Authentication',
+                    items: ['Git/SSHAuthentication', 'Git/SSH/Setup', 'Git/SSH/Identities', 'Git/SSH/PublishedKeys'],
+                },
                 'Git/OrphanBranch',
             ],
         },

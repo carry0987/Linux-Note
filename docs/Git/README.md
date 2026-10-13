@@ -20,4 +20,6 @@ For reset helpers, signed-commit identity switching, and more complete Git comma
 
 For GitHub and GitLab GPG commit signing on one computer, see [Sign GitHub and GitLab Commits with GPG](./GPGSigning.md).
 
+For GitHub and GitLab SSH authentication, published public-key endpoints, and server `authorized_keys` setup, see [Authenticate GitHub and GitLab with SSH](./SSHAuthentication.md).
+
 For `gh-pages` and orphan branch workflows, see [Creating Orphan Branches](./OrphanBranch.md).
