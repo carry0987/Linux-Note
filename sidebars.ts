@@ -52,11 +52,7 @@ const sidebars: SidebarsConfig = {
                 {
                     type: 'category',
                     label: 'Storage',
-                    items: [
-                        'System/Storage/AddDiskParted',
-                        'System/Storage/AddDiskFdisk',
-                        'System/Storage/ExpandLVM',
-                    ],
+                    items: ['System/Storage/AddDiskParted', 'System/Storage/AddDiskFdisk', 'System/Storage/ExpandLVM'],
                 },
                 {
                     type: 'category',
@@ -90,11 +86,7 @@ const sidebars: SidebarsConfig = {
                 {
                     type: 'category',
                     label: 'Terminal',
-                    items: [
-                        'MacOS/Terminal/zshrc',
-                        'MacOS/Terminal/TerminalHelpers',
-                        'MacOS/Terminal/screenrc',
-                    ],
+                    items: ['MacOS/Terminal/zshrc', 'MacOS/Terminal/TerminalHelpers', 'MacOS/Terminal/screenrc'],
                 },
                 {
                     type: 'category',
