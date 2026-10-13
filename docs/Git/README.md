@@ -18,4 +18,6 @@ git config --global core.ignorecase false
 
 For reset helpers, signed-commit identity switching, and more complete Git command guidance, see [Git Command Reference](./Command.md).
 
+For GitHub and GitLab GPG commit signing on one computer, see [Sign GitHub and GitLab Commits with GPG](./GPGSigning.md).
+
 For `gh-pages` and orphan branch workflows, see [Creating Orphan Branches](./OrphanBranch.md).
