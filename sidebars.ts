@@ -101,6 +101,7 @@ const sidebars: SidebarsConfig = {
             link: { type: 'doc', id: 'Git/README' },
             items: [
                 'Git/Command',
+                'Git/Configuration',
                 {
                     type: 'category',
                     label: 'GPG Signing',

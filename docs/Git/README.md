@@ -18,6 +18,8 @@ git config --global core.ignorecase false
 
 For reset helpers, signed-commit identity switching, and more complete Git command guidance, see [Git Command Reference](./Command.md).
 
+For a complete global `.gitconfig` example covering Git LFS, identity, GPG signing, and core behavior, see [Configure Global Git Settings](./Configuration.md).
+
 For GitHub and GitLab GPG commit signing on one computer, see [Sign GitHub and GitLab Commits with GPG](./GPGSigning.md).
 
 For GitHub and GitLab SSH authentication, published public-key endpoints, and server `authorized_keys` setup, see [Authenticate GitHub and GitLab with SSH](./SSHAuthentication.md).
