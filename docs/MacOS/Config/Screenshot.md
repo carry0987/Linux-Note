@@ -1,32 +1,38 @@
 ---
-title: Config
-sidebar_position: 4
+title: Screenshot
+sidebar_position: 1
 ---
 
-## MacOS
+## Screenshot
 
-### Screenshot
-**Save Path**  
+### Save Path
+
 Default
+
 ```bash
 defaults write com.apple.screencapture location ~/Desktop
 ```
+
 Change
+
 ```bash
 defaults write com.apple.screencapture location ~/Documents/Screenshot
 ```
 
-**Change File Name**  
+### Change File Name
+
 ```bash
 defaults write com.apple.screencapture name Screenshot-{NAME}
 ```
 
-**Change File Type**  
+### Change File Type
+
 ```bash
 defaults write com.apple.screencapture type png
 ```
 
-**Reload SystemUI**  
+### Reload SystemUI
+
 ```bash
 killall SystemUIServer
 ```

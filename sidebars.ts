@@ -76,8 +76,18 @@ const sidebars: SidebarsConfig = {
         {
             type: 'category',
             label: 'MacOS',
-            link: { type: 'doc', id: 'MacOS/Config' },
+            link: { type: 'doc', id: 'MacOS/Config/Screenshot' },
             items: [
+                {
+                    type: 'category',
+                    label: 'Configuration',
+                    items: ['MacOS/Config/Screenshot'],
+                },
+                {
+                    type: 'category',
+                    label: 'Troubleshooting',
+                    items: ['MacOS/Troubleshooting/ScreenshotShortcut'],
+                },
                 {
                     type: 'category',
                     label: 'Development',
