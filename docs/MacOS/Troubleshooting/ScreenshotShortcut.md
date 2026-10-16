@@ -1,9 +1,7 @@
 ---
-title: Screenshot Shortcut Troubleshooting
+title: Screenshot Shortcut
 sidebar_position: 1
 ---
-
-## macOS Screenshot Shortcut Troubleshooting
 
 Use these steps when `Shift + Command + 4` does not start a selection screenshot. Test the shortcut after each step.
 
